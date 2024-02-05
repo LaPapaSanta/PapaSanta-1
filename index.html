@@ -7,29 +7,29 @@
             type="image/x-icon">
         <title>Papa Santa</title>
         <!-- Enlazar el archivo CSS de Bootstrap -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+        <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
         <link rel="stylesheet" href="./assets/estilos.css">
         <style>
-         /* Estilos para el cuerpo de la página */
-            body {
-                background-image: url('./assets/img/Fondo.jpg');
-                background-size: auto; /* Ajusta el tamaño de la imagen para que cubra toda la página */
-                background-repeat:repeat;
-                background-attachment: fixed; /* Fija la imagen en su lugar para que no se desplace al desplazarse por la página */
-                background-position: center; /* Centra la imagen de fondo */
-                color: #ffffff; /* Color del texto sobre la imagen de fondo */
-            }
-        </style>
+        /* Estilos para el cuerpo de la página */
+        body {
+            background-color: rgb(255, 255, 255);
+        }
+    </style>
     </head>
     <body>
 
-        <div class="card bg-dark ">
-            <div class="card-body">
-                <!-- Encabezado (Navbar) -->
-                <ul class="nav justify-content-end">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Papa Santa</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Inicio</a>
+                        <a class="nav-link" href="/index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Menú</a>
@@ -37,261 +37,167 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Acerca de nosotros</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
-                    </li>
                 </ul>
+            </div>
+        </nav>
+        
+
+        <!-- Sección de Bienvenida (Jumbotron) con imagen de fondo -->
+        <div class="card bg-dark bg-black"></div>
+            <div class="jumbotron-fluid text-center container" id="jumbotron">
+                <!-- Fondo transparente -->
+                <img src="./assets/img/Disfuta.png"
+                    alt="Imagen de bienvenida" class="img-fluid">
+            </div>
+        </div>
+
+
+
+        <div class="container-fluid contenedor_botones mt-3">
+            <div class="row justify-content-center">
+                <div class="col-md">
+                    <section class="py-5">
+                        <div class="text-center">
+                            <!-- Botones en forma de imagen -->
+                            <div class="row">
+                                <div class="col-6 col-md-3 mb-3">
+                                    <button class="btn btn-lg btn-with-border">
+                                        <img src="/assets/img/desayuno-ingles.gif" alt="Desayunos" width="150" class="img-fluid">
+                                        <h5 class="font-weight-bold text-center d-none d-md-block">Desayunos</h5>
+                                    </button>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <button class="btn btn-lg btn-with-border">
+                                        <img src="/assets/img/hamburguesa.gif" alt="Comidas" width="150" class="img-fluid">
+                                        <h5 class="font-weight-bold text-center d-none d-md-block">Comida</h5>
+                                    </button>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <button class="btn btn-lg btn-with-border">
+                                        <img src="/assets/img/tarta-de-manzana.gif" alt="Postres" width="150" class="img-fluid">
+                                        <h5 class="font-weight-bold text-center d-none d-md-block">Postres</h5>
+                                    </button>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <button class="btn btn-lg btn-with-border">
+                                        <img src="/assets/img/taza-de-cafe.gif" alt="Bebidas" width="150" class="img-fluid">
+                                        <h5 class="font-weight-bold text-center d-none d-md-block">Bebidas</h5>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- Resto de tu contenido -->
             </div>
         </div>
         
 
-
-        <!-- Sección de Bienvenida (Jumbotron) con imagen de fondo -->
-        <div class="jumbotron text-center jumbotron-background" id="jumbotron" 
-            style="background-color: transparent;"> <!-- Fondo transparente -->
-            <img src="./assets/img/Tabla_con_logo.png" alt="Imagen de bienvenida" class="img-fluid">
+        <div class="jumbotron">
+            <h1 class="display-4 text-center my-4 text-primary">Los más pedidos</h1>
+            <p class="lead text-center text-muted">¡Descubre nuestros deliciosos platillos!</p>            
+            <div class="row">
+                <!-- Primera fila de 3 imágenes -->
+                <div class="col-md-4 col-sm-6 col-xs-12 mb-3">
+                    <div class="card custom-card">
+                        <img src="/assets/img/HamburguesaPechuga.png" alt="Imagen 1" class="card-img-top" style="width: 100%; height: 100%;">
+                        <div class="overlay">
+                            <button class="btn btn-primary"
+                            onclick="ordenarPorWhatsApp()">Ordenar
+                            por WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 mb-3">
+                    <div class="card custom-card">
+                        <img src="/assets/img/Costras.png" alt="Imagen 2" class="card-img-top" style="width: 100%; height: 100%;">
+                        <div class="overlay">
+                            <button class="btn btn-primary"
+                            onclick="ordenarPorWhatsApp()">Ordenar
+                            por WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 mb-3">
+                    <div class="card custom-card">
+                        <img src="/assets/img/LasagnaPastor.png" alt="Imagen 3" class="card-img-top" style="width: 100%; height: 100%;">
+                        <div class="overlay">
+                            <button class="btn btn-primary"
+                            onclick="ordenarPorWhatsApp()">Ordenar
+                            por WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Segunda fila de 2 imágenes -->
+                <div class="col-md-6 col-sm-6 col-xs-12 mb-3">
+                    <div class="card custom-card">
+                        <img src="/assets/img/Sanswich4Quesos.png" alt="Imagen 4" class="card-img-top" style="width: 100%; height: 100%;">
+                        <div class="overlay">
+                            <button class="btn btn-primary"
+                            onclick="ordenarPorWhatsApp()">Ordenar
+                            por WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 mb-3">
+                    <div class="card custom-card">
+                        <img src="/assets/img/SantoAlambre.png" alt="Imagen 5" class="card-img-top" style="width: 100%; height: 100%;">
+                        <div class="overlay">
+                            <button class="btn btn-primary"
+                            onclick="ordenarPorWhatsApp()">Ordenar
+                            por WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>            
         </div>
-
-
-        <!-- Sección de Menú 1-->
-        <section id="menu" class="py-5">
-            <div class="container">
-                <div class="text-center">
-                    <hr class="my-4">
-                    <h2 class="display-4">Desayunos Deliciosos: Comienza Tu Día con Energía"</h2>
-                    <hr class="my-4">
-                </div>
-                <h2 class="text-left"></h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="./assets/img/Alimentos/Burrito.png" class="card-img-top" alt="Plato 1">
-                            <div class="card-body">
-                                <h5 class="card-title text-dark">Burrito</h5>
-                                <p class="card-text text-dark">Delicioso Burrito (poblano, suadero, campechano) </p>
-                                <p class="card-text text-dark">$65.00</p>
-                                <!-- Agregamos el precio -->
-                                <a href="https://wa.me/+525560341556?text=¡Hola! Me gustaría ordenar el Plato 1 por favor (Es una prueba)." class="btn btn-primary">Ordenar</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Repite este bloque para otros platos -->
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="./assets/img/Alimentos/Burrito.png" class="card-img-top" alt="Plato 1">
-                            <div class="card-body">
-                                <h5 class="card-title text-dark">Burrito</h5>
-                                <p class="card-text text-dark">Delicioso Burrito (poblano, suadero, campechano) </p>
-                                <p class="card-text text-dark">$65.00</p>
-                                <!-- Agregamos el precio -->
-                                <a href="https://wa.me/+525560341556?text=¡Hola! Me gustaría ordenar el Plato 1 por favor (Es una prueba)." class="btn btn-primary">Ordenar</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="./assets/img/Alimentos/Burrito.png" class="card-img-top" alt="Plato 1">
-                            <div class="card-body">
-                                <h5 class="card-title text-dark">Burrito</h5>
-                                <p class="card-text text-dark">Delicioso Burrito (poblano, suadero, campechano) </p>
-                                <p class="card-text text-dark">$65.00</p>
-                                <!-- Agregamos el precio -->
-                                <a href="https://wa.me/+525560341556?text=¡Hola! Me gustaría ordenar el Plato 1 por favor (Es una prueba)." class="btn btn-primary">Ordenar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Sección de Menú 2-->
-        <section id="menu" class="py-5">
-            <div class="container">
-                <div class="text-center">
-                    <hr class="my-4">
-                    <h2 class="display-4">Comidas Sabrosas: Disfruta de Platos Energéticos"</h2>
-                    <hr class="my-4">
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="./assets/img/Alimentos/Burrito.png" class="card-img-top" alt="Plato 1">
-                            <div class="card-body">
-                                <h5 class="card-title text-dark">Burrito</h5>
-                                <p class="card-text text-dark">Delicioso Burrito (poblano, suadero, campechano) </p>
-                                <p class="card-text text-dark">$65.00</p>
-                                <!-- Agregamos el precio -->
-                                <a href="https://wa.me/+525560341556?text=¡Hola! Me gustaría ordenar el Plato 1 por favor (Es una prueba)." class="btn btn-primary">Ordenar</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Repite este bloque para otros platos -->
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="./assets/img/Alimentos/Burrito.png" class="card-img-top" alt="Plato 1">
-                            <div class="card-body">
-                                <h5 class="card-title text-dark">Burrito</h5>
-                                <p class="card-text text-dark">Delicioso Burrito (poblano, suadero, campechano) </p>
-                                <p class="card-text text-dark">$65.00</p>
-                                <!-- Agregamos el precio -->
-                                <a href="https://wa.me/+525560341556?text=¡Hola! Me gustaría ordenar el Plato 1 por favor (Es una prueba)." class="btn btn-primary">Ordenar</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="./assets/img/Alimentos/Burrito.png" class="card-img-top" alt="Plato 1">
-                            <div class="card-body">
-                                <h5 class="card-title text-dark">Burrito</h5>
-                                <p class="card-text text-dark">Delicioso Burrito (poblano, suadero, campechano) </p>
-                                <p class="card-text text-dark">$65.00</p>
-                                <!-- Agregamos el precio -->
-                                <a href="https://wa.me/+525560341556?text=¡Hola! Me gustaría ordenar el Plato 1 por favor (Es una prueba)." class="btn btn-primary">Ordenar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
+        
+        
 
     
-        <!-- Sección de Menú 3-->
-        <section id="menu" class="py-5">
+
+        <footer class="bg-dark text-white py-2">
             <div class="container">
-                <div class="text-center">
-                    <hr class="my-4">
-                    <h2 class="display-4">Beber con Placer: Explorando una Variedad de Sabores</h2>
-                    <hr class="my-4">
-                </div>                
+                <h4 class="text-center">Contactanos y visita nuestras redes
+                    sociales</h4>
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="./assets/img/Alimentos/Burrito.png" class="card-img-top" alt="Plato 1">
-                            <div class="card-body">
-                                <h5 class="card-title text-dark">Burrito</h5>
-                                <p class="card-text text-dark">Delicioso Burrito (poblano, suadero, campechano) </p>
-                                <p class="card-text text-dark">$65.00</p>
-                                <!-- Agregamos el precio -->
-                                <a href="https://wa.me/+525560341556?text=¡Hola! Me gustaría ordenar el Plato 1 por favor (Es una prueba)." class="btn btn-primary">Ordenar</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Repite este bloque para otros platos -->
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="./assets/img/Alimentos/Burrito.png" class="card-img-top" alt="Plato 1">
-                            <div class="card-body">
-                                <h5 class="card-title text-dark">Burrito</h5>
-                                <p class="card-text text-dark">Delicioso Burrito (poblano, suadero, campechano) </p>
-                                <p class="card-text text-dark">$65.00</p>
-                                <!-- Agregamos el precio -->
-                                <a href="https://wa.me/+525560341556?text=¡Hola! Me gustaría ordenar el Plato 1 por favor (Es una prueba)." class="btn btn-primary">Ordenar</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="./assets/img/Alimentos/Burrito.png" class="card-img-top" alt="Plato 1">
-                            <div class="card-body">
-                                <h5 class="card-title text-dark">Burrito</h5>
-                                <p class="card-text text-dark">Delicioso Burrito (poblano, suadero, campechano) </p>
-                                <p class="card-text text-dark">$65.00</p>
-                                <!-- Agregamos el precio -->
-                                <a href="https://wa.me/+525560341556?text=¡Hola! Me gustaría ordenar el Plato 1 por favor (Es una prueba)." class="btn btn-primary">Ordenar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-        <!-- Sección de Menú 4-->
-        <section id="menu" class="py-5">
-            <div class="container">
-                <div class="text-center">
-                    <hr class="my-4">
-                    <h2 class="display-4">Postres Tentadores: Deléitate con Dulces Caprichos</h2>
-                    <hr class="my-4">
-                </div>                
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="./assets/img/Alimentos/Burrito.png" class="card-img-top" alt="Plato 1">
-                            <div class="card-body">
-                                <h5 class="card-title text-dark">Burrito</h5>
-                                <p class="card-text text-dark">Delicioso Burrito (poblano, suadero, campechano) </p>
-                                <p class="card-text text-dark">$65.00</p>
-                                <!-- Agregamos el precio -->
-                                <a href="https://wa.me/+525560341556?text=¡Hola! Me gustaría ordenar el Plato 1 por favor (Es una prueba)." class="btn btn-primary">Ordenar</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Repite este bloque para otros platos -->
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="./assets/img/Alimentos/Burrito.png" class="card-img-top" alt="Plato 1">
-                            <div class="card-body">
-                                <h5 class="card-title text-dark">Burrito</h5>
-                                <p class="card-text text-dark">Delicioso Burrito (poblano, suadero, campechano) </p>
-                                <p class="card-text text-dark">$65.00</p>
-                                <!-- Agregamos el precio -->
-                                <a href="https://wa.me/+525560341556?text=¡Hola! Me gustaría ordenar el Plato 1 por favor (Es una prueba)." class="btn btn-primary">Ordenar</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="./assets/img/Alimentos/Burrito.png" class="card-img-top" alt="Plato 1">
-                            <div class="card-body">
-                                <h5 class="card-title text-dark">Burrito</h5>
-                                <p class="card-text text-dark">Delicioso Burrito (poblano, suadero, campechano) </p>
-                                <p class="card-text text-dark">$65.00</p>
-                                <!-- Agregamos el precio -->
-                                <a href="https://wa.me/+525560341556?text=¡Hola! Me gustaría ordenar el Plato 1 por favor (Es una prueba)." class="btn btn-primary">Ordenar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <footer class="bg-dark text-white py-5">
-            <div class="container">
-                <h2 class="text-center">Contactanos o visita nuestras redes sociales</h2>
-                <div class="row">
-                    <div class="col-md-6 mx-auto">
+                    <div class="col-md-3 mx-auto">
                         <form>
                             <!-- Campos de formulario -->
                         </form>
                     </div>
                 </div>
-                <div class="text-center mt-4">
+                <div class="text-center mt-2">
                     <!-- Iconos de redes sociales -->
-                    <a href="https://www.facebook.com/profile.php?id=61552565423583" class="text-white mx-2 fa-2x"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/Papa.santa1?fbclid=IwAR3lHoBWRvzKnPOz6zq2mE1RNhGoqnhgrvYQvRW-ErHoIg6OFckhZm99nPU" class="text-white mx-2"><i class="fab fa-instagram fa-2x"></i></a>
-                    <a href="#" class="text-white mx-2"><i class="fab fa-tiktok fa-2x"></i></a>
-                    <a href="https://wa.me/+525560341556" class="text-white mx-2 fa-2x"><i class="fab fa-whatsapp"></i></a>
+                    <a
+                        href="https://www.facebook.com/profile.php?id=61552565423583"
+                        class="text-white mx-2 fa-2x"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a
+                        href="https://www.instagram.com/Papa.santa1?fbclid=IwAR3lHoBWRvzKnPOz6zq2mE1RNhGoqnhgrvYQvRW-ErHoIg6OFckhZm99nPU"
+                        class="text-white mx-2"><i
+                            class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#" class="text-white mx-2"><i
+                            class="fab fa-tiktok fa-2x"></i></a>
+                    <a href="https://wa.me/+525560341556"
+                        class="text-white mx-2 fa-2x"><i
+                            class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </footer>
-        
 
         <!-- Enlazar el archivo JavaScript de Bootstrap y jQuery (opcional) -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
-        <script src="./assets/estilos.js"></script>
+        <script src="./assets/funciones.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js"></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </body>
 </html>
